@@ -6,14 +6,19 @@
 //
 import Foundation
 
-class UserDefaultsSourceStore: SourcesStore {
+final class UserDefaultsSourceStore: SourcesStore {
     private let key = "selected_sources"
-    
-    func saveSources(_ ids: [sourceId]) {
-        UserDefaults.standard.set(ids, forKey: key)
+    private let defaults: UserDefaults
+
+    init(defaults: UserDefaults = .standard) {
+        self.defaults = defaults
     }
-    
+
+    func saveSources(_ ids: [sourceId]) {
+        defaults.set(ids, forKey: key)
+    }
+
     func loadSources() -> [sourceId] {
-        UserDefaults.standard.stringArray(forKey: key) ?? []
+        defaults.stringArray(forKey: key) ?? []
     }
 }

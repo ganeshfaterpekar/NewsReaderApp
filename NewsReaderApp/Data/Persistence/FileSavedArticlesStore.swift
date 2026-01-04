@@ -8,19 +8,12 @@
 import Foundation
 
 class FileSavedArticlesStore: SavedArticlesStore {
-    
-    private let url: URL = {
-        let documentsURL = FileManager.default.urls(
-            for: .documentDirectory,
-            in: .userDomainMask
-        ).first!
 
-        return documentsURL.appending(
-            path: "saved_articles.json",
-            directoryHint: .notDirectory
-        )
-    }()
-    
+    private let url: URL
+
+    init(url: URL) {
+        self.url = url
+    }
     
     func load() -> [Article] {
         guard let data =  try? Data(contentsOf: url) else { return [] }
@@ -30,8 +23,8 @@ class FileSavedArticlesStore: SavedArticlesStore {
     func save(article: Article) {
       var existing = load()
       if existing.contains(where: { $0.url == article.url }) { return }
-       existing.insert(article, at: 0)
-       saveAll(articles: existing)
+      existing.insert(article, at: 0)
+      saveAll(articles: existing)
     }
     
     func saveAll(articles: [Article]) {

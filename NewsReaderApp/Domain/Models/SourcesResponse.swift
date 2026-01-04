@@ -6,7 +6,7 @@
 //
 
 
-struct Sources: Decodable, Identifiable {
+struct Sources: Decodable, Identifiable,Equatable {
     let id: String
     let name: String
 }

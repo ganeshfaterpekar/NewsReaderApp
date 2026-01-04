@@ -11,5 +11,7 @@ struct Sources: Decodable, Identifiable {
     let name: String
 }
 
-
-
+struct SourcesResponse: Decodable {
+    let status: String
+    let sources: [Sources]
+}

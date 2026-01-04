@@ -30,7 +30,6 @@ class SourcesViewModel: ObservableObject {
         selectedSourceIds.contains(sourceId)
     }
     
-    //TODO:
     func toggleSelection(sourceId: String) {
         if selectedSourceIds.contains(sourceId) {
             selectedSourceIds.remove(sourceId)

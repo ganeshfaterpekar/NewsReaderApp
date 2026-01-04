@@ -9,10 +9,4 @@ struct TopHeadlinesResponse: Decodable {
     let status: String?
     let totalResults: Int?
     var articles: [ArticlePayload] = []
-    
-}
-
-struct SourcesResponse: Decodable {
-    let status: String
-    let sources: [Sources]
 }

@@ -7,13 +7,16 @@
 import SwiftUI
 
 struct MainTabView: View {
+    
+    @Environment(\.appContainer) private var container
+    
     var body: some View {
         TabView {
-            HeadlinesView()
+            HeadlinesView(viewModel: HeadlinesViewModel(newsService: container.newsService, sourcesStore: container.sourcesStore, savedStore: container.savedArticlesStore))
                 .tabItem { Label("Headlines", systemImage: "newspaper")}
-            SourceView()
+            SourceView(viewModel: .init(newsService: container.newsService, sourcesStore: container.sourcesStore))
                 .tabItem { Label ("Sources",systemImage: "list.bullet")}
-            SavedView()
+            SavedView(viewModel: SavedArticlesViewModel(savedArticleStore: container.savedArticlesStore))
                 .tabItem { Label ("Saved", systemImage: "bookmark")}
         }
     }

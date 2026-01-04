@@ -10,6 +10,6 @@ import Foundation
 typealias sourceId = String
 
 protocol SourcesStore {
-    func saveSources(id : sourceId)
+    func saveSources(_ ids : [sourceId])
     func loadSources() -> [sourceId]
 }

@@ -19,19 +19,11 @@
 			remoteGlobalIDString = D2EA1C0D2F068FAC0006CC2A;
 			remoteInfo = NewsReaderApp;
 		};
-		D2EA1C262F068FAF0006CC2A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D2EA1C062F068FAC0006CC2A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D2EA1C0D2F068FAC0006CC2A;
-			remoteInfo = NewsReaderApp;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		D2EA1C0E2F068FAC0006CC2A /* NewsReaderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsReaderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2EA1C1B2F068FAF0006CC2A /* NewsReaderAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewsReaderAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D2EA1C252F068FAF0006CC2A /* NewsReaderAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewsReaderAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2EA1C6E2F06FFD80006CC2A /* MBUILibrary */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MBUILibrary; sourceTree = "<group>"; };
 		D2EA1C882F0AB6AD0006CC2A /* MBNetworking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MBNetworking; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,13 +63,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D2EA1C222F068FAF0006CC2A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -99,7 +84,6 @@
 			children = (
 				D2EA1C0E2F068FAC0006CC2A /* NewsReaderApp.app */,
 				D2EA1C1B2F068FAF0006CC2A /* NewsReaderAppTests.xctest */,
-				D2EA1C252F068FAF0006CC2A /* NewsReaderAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -161,29 +145,6 @@
 			productReference = D2EA1C1B2F068FAF0006CC2A /* NewsReaderAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		D2EA1C242F068FAF0006CC2A /* NewsReaderAppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D2EA1C352F068FAF0006CC2A /* Build configuration list for PBXNativeTarget "NewsReaderAppUITests" */;
-			buildPhases = (
-				D2EA1C212F068FAF0006CC2A /* Sources */,
-				D2EA1C222F068FAF0006CC2A /* Frameworks */,
-				D2EA1C232F068FAF0006CC2A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D2EA1C272F068FAF0006CC2A /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				D2EA1C282F068FAF0006CC2A /* NewsReaderAppUITests */,
-			);
-			name = NewsReaderAppUITests;
-			packageProductDependencies = (
-			);
-			productName = NewsReaderAppUITests;
-			productReference = D2EA1C252F068FAF0006CC2A /* NewsReaderAppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -198,10 +159,6 @@
 						CreatedOnToolsVersion = 16.4;
 					};
 					D2EA1C1A2F068FAF0006CC2A = {
-						CreatedOnToolsVersion = 16.4;
-						TestTargetID = D2EA1C0D2F068FAC0006CC2A;
-					};
-					D2EA1C242F068FAF0006CC2A = {
 						CreatedOnToolsVersion = 16.4;
 						TestTargetID = D2EA1C0D2F068FAC0006CC2A;
 					};
@@ -223,7 +180,6 @@
 			targets = (
 				D2EA1C0D2F068FAC0006CC2A /* NewsReaderApp */,
 				D2EA1C1A2F068FAF0006CC2A /* NewsReaderAppTests */,
-				D2EA1C242F068FAF0006CC2A /* NewsReaderAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -237,13 +193,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D2EA1C192F068FAF0006CC2A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D2EA1C232F068FAF0006CC2A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -267,13 +216,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D2EA1C212F068FAF0006CC2A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -281,11 +223,6 @@
 			isa = PBXTargetDependency;
 			target = D2EA1C0D2F068FAC0006CC2A /* NewsReaderApp */;
 			targetProxy = D2EA1C1C2F068FAF0006CC2A /* PBXContainerItemProxy */;
-		};
-		D2EA1C272F068FAF0006CC2A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D2EA1C0D2F068FAC0006CC2A /* NewsReaderApp */;
-			targetProxy = D2EA1C262F068FAF0006CC2A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -499,38 +436,6 @@
 			};
 			name = Release;
 		};
-		D2EA1C362F068FAF0006CC2A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ganesh.NewsReaderAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = NewsReaderApp;
-			};
-			name = Debug;
-		};
-		D2EA1C372F068FAF0006CC2A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ganesh.NewsReaderAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = NewsReaderApp;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -557,15 +462,6 @@
 			buildConfigurations = (
 				D2EA1C332F068FAF0006CC2A /* Debug */,
 				D2EA1C342F068FAF0006CC2A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D2EA1C352F068FAF0006CC2A /* Build configuration list for PBXNativeTarget "NewsReaderAppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D2EA1C362F068FAF0006CC2A /* Debug */,
-				D2EA1C372F068FAF0006CC2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -10,7 +10,6 @@ struct HeadlinesView: View {
     @ObservedObject var viewModel: HeadlinesViewModel
     @State private var selectedURL: URL?
 
-    
     var body: some View {
         NavigationStack {
             Group {
@@ -22,12 +21,6 @@ struct HeadlinesView: View {
                     )
                 }
                 else {
-//                    List(viewModel.articles) { article in
-//                        NewsReaderUI.makeHeadlinesRowItemsView(articleItem: article, isSaved: viewModel.isSaved(article)){
-//                            viewModel.save(article)
-//                        }
-//                    }
-                    
                     List {
                         ForEach(viewModel.articles) { article in
                             Button {

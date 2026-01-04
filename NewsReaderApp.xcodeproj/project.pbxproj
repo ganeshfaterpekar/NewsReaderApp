@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		D2EA1C752F0705000006CC2A /* MBUILibrary in Frameworks */ = {isa = PBXBuildFile; productRef = D2EA1C742F0705000006CC2A /* MBUILibrary */; };
+		D2EA1C8A2F0AB75D0006CC2A /* MBNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = D2EA1C892F0AB75D0006CC2A /* MBNetworking */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		D2EA1C1C2F068FAF0006CC2A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +32,8 @@
 		D2EA1C0E2F068FAC0006CC2A /* NewsReaderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsReaderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2EA1C1B2F068FAF0006CC2A /* NewsReaderAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewsReaderAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2EA1C252F068FAF0006CC2A /* NewsReaderAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewsReaderAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2EA1C6E2F06FFD80006CC2A /* MBUILibrary */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MBUILibrary; sourceTree = "<group>"; };
+		D2EA1C882F0AB6AD0006CC2A /* MBNetworking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MBNetworking; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -52,6 +59,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2EA1C752F0705000006CC2A /* MBUILibrary in Frameworks */,
+				D2EA1C8A2F0AB75D0006CC2A /* MBNetworking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,9 +84,12 @@
 		D2EA1C052F068FAC0006CC2A = {
 			isa = PBXGroup;
 			children = (
+				D2EA1C882F0AB6AD0006CC2A /* MBNetworking */,
+				D2EA1C6E2F06FFD80006CC2A /* MBUILibrary */,
 				D2EA1C102F068FAC0006CC2A /* NewsReaderApp */,
 				D2EA1C1E2F068FAF0006CC2A /* NewsReaderAppTests */,
 				D2EA1C282F068FAF0006CC2A /* NewsReaderAppUITests */,
+				D2EA1C732F0705000006CC2A /* Frameworks */,
 				D2EA1C0F2F068FAC0006CC2A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +102,13 @@
 				D2EA1C252F068FAF0006CC2A /* NewsReaderAppUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		D2EA1C732F0705000006CC2A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +131,8 @@
 			);
 			name = NewsReaderApp;
 			packageProductDependencies = (
+				D2EA1C742F0705000006CC2A /* MBUILibrary */,
+				D2EA1C892F0AB75D0006CC2A /* MBNetworking */,
 			);
 			productName = NewsReaderApp;
 			productReference = D2EA1C0E2F068FAC0006CC2A /* NewsReaderApp.app */;
@@ -550,6 +571,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D2EA1C742F0705000006CC2A /* MBUILibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MBUILibrary;
+		};
+		D2EA1C892F0AB75D0006CC2A /* MBNetworking */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MBNetworking;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D2EA1C062F068FAC0006CC2A /* Project object */;
 }

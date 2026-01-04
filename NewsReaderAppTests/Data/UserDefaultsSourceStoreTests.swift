@@ -16,7 +16,6 @@ final class UserDefaultsSourceStoreTests: XCTestCase {
     override func setUp() {
         super.setUp()
 
-        // Isolated suite for tests
         defaults = UserDefaults(suiteName: "UserDefaultsSourceStoreTests")
         defaults.removePersistentDomain(forName: "UserDefaultsSourceStoreTests")
 
@@ -31,46 +30,28 @@ final class UserDefaultsSourceStoreTests: XCTestCase {
     }
 
     func test_loadSources_returnsEmpty_whenNothingSaved() {
-        // When
         let result = store.loadSources()
-
-        // Then
         XCTAssertEqual(result, [])
     }
 
     func test_saveSources_thenLoadSources_returnsSavedValues() {
-        // Given
         let ids: [sourceId] = ["bbc-news", "cnn", "the-verge"]
-
-        // When
         store.saveSources(ids)
         let result = store.loadSources()
-
-        // Then
         XCTAssertEqual(result, ids)
     }
 
     func test_saveSources_overwritesPreviousValues() {
-        // Given
         store.saveSources(["bbc-news"])
-
-        // When
         store.saveSources(["cnn", "the-verge"])
         let result = store.loadSources()
-
-        // Then
         XCTAssertEqual(result, ["cnn", "the-verge"])
     }
 
     func test_saveSources_emptyArray_clearsStoredValues() {
-        // Given
         store.saveSources(["bbc-news", "cnn"])
-
-        // When
         store.saveSources([])
         let result = store.loadSources()
-
-        // Then
         XCTAssertEqual(result, [])
     }
 }

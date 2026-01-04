@@ -29,7 +29,6 @@ final class FileSavedArticlesStoreTests: XCTestCase {
         super.tearDown()
     }
 
-    // MARK: - Helpers
 
     private func makePayload(
         author: String? = "Author",
@@ -46,7 +45,6 @@ final class FileSavedArticlesStoreTests: XCTestCase {
         return Article(payload: payload)! // safe for test
     }
 
-    // MARK: - Tests
 
     func test_load_returnsEmpty_whenFileDoesNotExist() {
         XCTAssertEqual(store.load(), [])
@@ -66,7 +64,7 @@ final class FileSavedArticlesStoreTests: XCTestCase {
 
     func test_saveArticle_dedupesByURL() {
         let a1 = makeArticle(url: "https://example.com/dup")
-        let a2 = makeArticle(url: "https://example.com/dup") // same URL => should dedupe
+        let a2 = makeArticle(url: "https://example.com/dup")
 
         store.save(article: a1)
         store.save(article: a2)
@@ -123,11 +121,8 @@ final class FileSavedArticlesStoreTests: XCTestCase {
     }
 
     func test_articleInitializer_returnsNil_whenMissingRequiredFields() {
-        // Missing title
         XCTAssertNil(Article(payload: makePayload(title: nil)))
-        // Missing description
         XCTAssertNil(Article(payload: makePayload(description: nil)))
-        // Missing url
         XCTAssertNil(Article(payload: makePayload(url: nil)))
     }
 }

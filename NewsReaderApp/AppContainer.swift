@@ -6,21 +6,10 @@
 //
 import SwiftUI
 
-
-
 class AppContainer {
      var newsService: NewsService
      var savedArticlesStore: SavedArticlesStore
      var sourcesStore: SourcesStore
-    
-//    lazy var headlinesViewModel: HeadlinesViewModel = {
-//        HeadlinesViewModel(newsService: newsService, sourcesStore: sourcesStore)
-//    }()
-//    
-//    lazy var savedArticlesViewModel: SavedArticlesViewModel = {
-//        SavedArticlesViewModel(savedArticleStore: savedArticlesStore)
-//    }()
-//    
     
     init(newsService: NewsService, savedArticlesStore: SavedArticlesStore, sourcesStore: SourcesStore) {
         self.newsService = newsService
@@ -30,10 +19,22 @@ class AppContainer {
     
 }
 
-
 extension AppContainer {
+    
+    private static let url: URL = {
+        let documentsURL = FileManager.default.urls(
+            for: .documentDirectory,
+            in: .userDomainMask
+        ).first!
+
+        return documentsURL.appending(
+            path: "saved_articles.json",
+            directoryHint: .notDirectory
+        )
+    }()
+
     static let live = AppContainer(
         newsService: NewsAPIService(),
-        savedArticlesStore: FileSavedArticlesStore(),
+        savedArticlesStore: FileSavedArticlesStore(url: url),
         sourcesStore: UserDefaultsSourceStore())
 }

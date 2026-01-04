@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SourceView: View {
-    @StateObject var viewModel: SourcesViewModel
+    @ObservedObject var viewModel: SourcesViewModel
     
     var body: some View {
         NavigationStack {

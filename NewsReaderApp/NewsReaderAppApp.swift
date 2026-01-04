@@ -8,10 +8,27 @@
 import SwiftUI
 
 @main
-struct NewsReaderAppApp: App {
+struct NewsReaderApp: App {
+    
+    @Environment(\.appContainer) private var container
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainTabView()
+                .environment(\.appContainer, container)
         }
     }
 }
+
+private struct AppContainerKey: EnvironmentKey {
+    static let defaultValue: AppContainer = .live
+}
+
+extension EnvironmentValues {
+    var appContainer: AppContainer {
+        get { self[AppContainerKey.self] }
+        set { self[AppContainerKey.self] = newValue }
+    }
+}
+
+
+

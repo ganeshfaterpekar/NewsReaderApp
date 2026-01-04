@@ -10,9 +10,7 @@ import SwiftUI
 
 @MainActor
 class HeadlinesViewModel: ObservableObject {
-    
-    @Environment(\.appContainer) private var container
-    
+
     @Published private(set) var articles: [Article] = []
     @Published private(set) var isEmpty = false
     @Published private(set) var savedIds: Set<String> = []
